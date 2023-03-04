@@ -101,12 +101,6 @@ html {
   }
 }
 
-/*
-  primary: #2D99CC
-  success: #319966
-  danger: #993332
-*/
-
 .tm-btn {
   display: inline-block;
   font-size: 1rem;
@@ -338,6 +332,10 @@ p, address {
   font-size: 0.95rem;
 }
 
+.tm-gallery-letters {
+  font-size: 0.7rem;
+}
+
 .tm-section,
 .tm-container-inner,
 .tm-container-inner-2 {
@@ -408,11 +406,29 @@ p, address {
   margin-bottom: 40px;
 }
 
+
+
 .tm-paging-item {
   list-style: none;
   display: inline-block;
   border: 1px solid #BC2434;
   margin: 7px;
+}
+
+.link-house {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #BC2434;
+  background-color: transparent;
+}
+
+.link-house.active,
+.link-house:hover {
+  background-color: #BC2434;
+  color: white;
 }
 
 .tm-paging-link {

@@ -53,29 +53,41 @@
 			<!-- Gallery -->
 			<div class="row tm-gallery">
 				<!-- gallery page 1 -->
-				<div id="tm-gallery-page-one" class="tm-gallery-page">
-					<tbody>
-						{% for apartamento in apartamentos %}
+				<div class="tm-gallery-page">
+				{% if page %}
+					{% for apartamento in page.object_list %}
 						<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
 							<figure>
 								<img src="{{ apartamento.imagem.url }}" class="img-fluid tm-gallery-img" alt="{{ apartamento.titulo }}">
-								<figcaption>
-									<a class="tm-gallery-title tm-paging-link" href="{% url 'immobile' apartamento.id %}">{{ apartamento.titulo }}</a>
-									<p class="tm-gallery-description">{{ apartamento.descricao }}</p>
-									<p class="tm-gallery-description">Nº de quartos: {{ apartamento.numero_quartos }}</p>
-									<p class="tm-gallery-description">Nº de banheiros: {{ apartamento.numero_banheiros }}</p>
+								<figcaptions>
+									<a class="tm-btn tm-btn-danger block" href="{% url 'register' pg=3 %}">{{ apartamento.titulo }}</a>
+									<p class="tm-gallery-letters">{{ apartamento.descricao }}</p>
+									<p class="tm-gallery-letters">Nº de quartos: {{ apartamento.numero_quartos }}</p>
+									<p class="tm-gallery-letters">Nº de banheiros: {{ apartamento.numero_banheiros }}</p>
 									<p class="tm-gallery-price">R$: {{ apartamento.preco }}/mês</p>
 								</figcaption>
 							</figure>
 						</article>
 						{% endfor %}
+					{% else %}
+						<p class="">No items found.</p>
+					{% endif %}
 				</div> <!-- gallery page 1 -->
+			</div>
+
+			<div class="pagination tm-nav-right">
+				<div class="step-links">
+					{% if page.has_previous %}
+						<a class="tm-btn" href="{% url 'index' %}?page={{page.previous_page_number}}">Anterior</a>
+					{% endif %}
+					{% if page.has_next %}
+						<a class="tm-btn" href="{% url 'index' %}?page={{page.next_page_number}}">Próximo</a>
+					{% endif %}
+				</div>
+			</div>
 
 
-				<!-- gallery page 2 -->
-				<div id="tm-gallery-page-information" class="tm-gallery-page hidden">
 
-				</div> <!-- gallery page 2 -->
 			</div>
 			<div class="tm-section tm-container-inner">
 				<div class="row">
