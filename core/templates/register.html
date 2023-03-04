@@ -39,7 +39,7 @@
 
 		<main>
 			<header class="row tm-welcome-section">
-				{% bootstrap_messages %}
+				<div class="col-12 tm-container-inner " >{% bootstrap_messages %}</div>
 				<h2 class="col-12 text-center tm-section-title ">Novo edifício</h2>
 				<form class="form col-12 text-right" action="{% url 'register' pg=0 %}" method="post" autocomplete="off" enctype="multipart/form-data">
 					{% csrf_token %}
@@ -52,7 +52,6 @@
 				<form class="form col-12 text-right " action="{% url 'register' pg=1 %}" method="post" autocomplete="off" enctype="multipart/form-data">
 					{% csrf_token %}
 					{% bootstrap_form form_apartamento %}
-					<!-- {% bootstrap_messages %} -->
 					{% buttons %}
 						<button type="submit" class="tm-btn tm-btn-danger">Cadastrar apartamento</button>
 					{% endbuttons %}
@@ -61,7 +60,7 @@
 		</main>
 
 		<footer class="tm-footer text-center">
-			<p>Copyright &copy; 2020 Simple House
+			<p>Copyright &copy; 2023 Biopark
             | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
 		</footer>
 	</div>

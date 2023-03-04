@@ -69,6 +69,7 @@ click-plugins==1.1.1
 cmd2==2.4.2+ds
 colorama==0.4.6
 configobj==5.0.8
+confusable-homoglyphs==3.2.0
 constantly==15.1.0
 contourpy==1.0.7
 crackmapexec==5.4.0
@@ -88,8 +89,12 @@ diskcache==5.4.0
 distlib==0.3.6
 distro==1.8.0
 dj-static==0.0.6
-Django==3.2.17
+Django==4.1.7
 django-bootstrap4==22.3
+django-cpf==0.1.0
+django-input-mask==2.0.2
+django-phonenumber-field==7.0.2
+django-registration==3.3
 django-stdimage==6.0.1
 dnslib==0.9.23
 dnspython==2.3.0
@@ -262,6 +267,7 @@ pexpect==4.8.0
 pgcli==3.5.0
 pgspecial==2.0.1
 phonenumbers==8.12.57
+phonenumberslite==8.13.7
 pickleshare==0.7.5
 Pillow==9.4.0
 plaster==1.0

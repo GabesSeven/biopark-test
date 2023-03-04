@@ -1,5 +1,7 @@
 from django.db import models
 from stdimage.models import StdImageField
+from cpf_field.models import CPFField
+from phonenumber_field.modelfields import PhoneNumberField
 
 # SIGNALS
 from django.db.models import signals
@@ -18,10 +20,9 @@ class Cliente(models.Model):
     nome = models.CharField('Nome', max_length=25)
     sobrenome = models.CharField('Sobrenome', max_length=25)
     email = models.EmailField('E-mail', max_length=100)
-    telefone = models.CharField('Telefone', max_length=16, help_text='Máximo 16 caracteres')
-    cpf = models.CharField('CPF', max_length=16, help_text='Máximo 16 caracteres')
+    telefone = PhoneNumberField(region="BR")
+    cpf = CPFField('CPF')
     apartamento = models.ForeignKey('Apartamento', on_delete=models.CASCADE)
-
 
     class Meta():
         verbose_name = 'Cliente'
@@ -31,14 +32,32 @@ class Cliente(models.Model):
         return f'{self.nome} {self.sobrenome}'
 
 class Edificio(models.Model):
+
+    CIDADE_CHOICES = (
+        'Curitiba',
+        'Londrina',
+        'Maringá',
+        'Ponta Grossa',
+        'Cascavel',
+        'São José dos Pinhais',
+        'Foz do Iguaçu',
+        'Colombo',
+        'Guarapuava',
+        'Paranaguá',
+        'Araucária',
+        'Toledo',
+        'Apucarana',
+        'Campo Largo',
+        'Pinhais',
+        'Arapongas',
+    )
+
     id = models.AutoField(primary_key=True)
-    nome = models.CharField('Nome', max_length=50) # , help_text
-    rua = models.CharField('Rua', max_length=50) # , help_text
-    numero = models.IntegerField('Numero') # , help_text
-    complemento = models.CharField('Complemento', max_length=100) # , help_text
-    cidade = models.CharField('Cidade', max_length=100) # , help_text
-    pais = models.CharField('País', max_length=100) # , help_text
-    cep = models.CharField('CEP', max_length=100) # , help_text
+    nome = models.CharField('Nome', max_length=50)
+    rua = models.CharField('Rua', max_length=50)
+    numero = models.IntegerField('Número')
+    complemento = models.CharField('Complemento', max_length=100)
+    cidade = models.CharField('Cidade', max_length=50) # , choices=CIDADE_CHOICES
 
     class Meta():
         verbose_name = 'Edificío'
@@ -52,8 +71,12 @@ class Apartamento(models.Model):
     titulo = models.CharField('Título', max_length=50 , help_text='Máximo 50 caracteres')
     edificio  = models.ForeignKey('Edificio', on_delete=models.CASCADE)
     preco = models.DecimalField('Preço', max_digits=8, decimal_places=2, help_text='Valor mensal do imóvel')
-    imagem = StdImageField('Imagem', upload_to='cadastros', variations={'thumb': (124, 124)})
+    descricao = models.TextField('Descrição')
+    numero_quartos = models.IntegerField('Número de quartos') # , help_text
+    numero_banheiros = models.IntegerField('Número de banheiros') # , help_text
+    imagem = StdImageField('Imagem', upload_to='cadastros', variations={'thumb': (280, 280)})
     slug = models.SlugField('Slug', max_length=100, blank=True, editable=False)
+    alugado = models.BooleanField('Alugado', default=False)
 
     class Meta():
         verbose_name = 'Apartamento'

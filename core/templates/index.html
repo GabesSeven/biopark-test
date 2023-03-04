@@ -9,6 +9,7 @@
   <title>Biopark Imóveis</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/all.min.css' %}">
 </head>
 <body>
 	<div class="container">
@@ -20,8 +21,6 @@
 					<div class="row tm-header-inner">
 						<div class="col-md-6 col-12">
 							<img src="{% static 'img/biopark-logo.png' %}" alt="Logo" class="tm-site" />
-							<div class="tm-site-text-box">
-							</div>
 						</div>
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
@@ -61,9 +60,11 @@
 							<figure>
 								<img src="{{ apartamento.imagem.url }}" class="img-fluid tm-gallery-img" alt="{{ apartamento.titulo }}">
 								<figcaption>
-									<h4 class="tm-gallery-title">{{ apartamento.titulo }}</h4>
+									<a class="tm-gallery-title tm-paging-link" href="{% url 'immobile' apartamento.id %}">{{ apartamento.titulo }}</a>
 									<p class="tm-gallery-description">{{ apartamento.descricao }}</p>
-									<p class="tm-gallery-price">R${{ apartamento.preco }}</p>
+									<p class="tm-gallery-description">Nº de quartos: {{ apartamento.numero_quartos }}</p>
+									<p class="tm-gallery-description">Nº de banheiros: {{ apartamento.numero_banheiros }}</p>
+									<p class="tm-gallery-price">R$: {{ apartamento.preco }}/mês</p>
 								</figcaption>
 							</figure>
 						</article>
@@ -95,7 +96,7 @@
 		</main>
 
 		<footer class="tm-footer text-center">
-			<p>Copyright &copy; 2020 Simple House
+			<p>Copyright &copy; 2023 Biopark
 
             | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
 		</footer>

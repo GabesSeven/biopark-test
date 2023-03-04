@@ -1,3 +1,5 @@
+{% load static %}
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
 
@@ -5,39 +7,28 @@
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Simple House - Contact Page</title>
+    <title>Biopark Imóveis - Apartamento</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
-    <link href="css/all.min.css" rel="stylesheet" />
-	<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'css/css/all.min.css' %}">
 </head>
-<!--
-
-Simple House
-
-https://templatemo.com/tm-539-simple-house
-
--->
 <body>
 
 	<div class="container">
 	<!-- Top box -->
 		<!-- Logo & Site Name -->
 		<div class="placeholder">
-			<div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/logo-background.png' %}">
 				<div class="tm-header">
 					<div class="row tm-header-inner">
 						<div class="col-md-6 col-12">
-							<img src="img/simple-house-logo.png" alt="Logo" class="tm-site-logo" />
-							<div class="tm-site-text-box">
-								<h1 class="tm-site-title">Simple House</h1>
-								<h6 class="tm-site-description">new restaurant template</h6>
-							</div>
+							<img src="{% static 'img/biopark-logo.png' %}" alt="Logo" class="tm-site-logo" />
 						</div>
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
-								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link">Home</a></li>
-								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">About</a></li>
-								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link active">Contact</a></li>
+								<li class="tm-nav-li"><a href="{% url 'index' %}" class="tm-nav-link">Página Inicial</a></li>
+								<li class="tm-nav-li"><a href="{% url 'register' pg=3 %}" class="tm-nav-link">Cadastrar</a></li>
+								<li class="tm-nav-li"><a href="{% url 'sec-bio' %}" class="tm-nav-link">Administrar</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -47,8 +38,8 @@ https://templatemo.com/tm-539-simple-house
 
 		<main>
 			<header class="row tm-welcome-section">
-				<h2 class="col-12 text-center tm-section-title">Contact Page</h2>
-				<p class="col-12 text-center">You may use <a rel="nofollow" href="https://www.ltcclock.com/downloads/simple-contact-form/" target="_blank">Simple Contact Form</a> to send email to your inbox. You can modify and use this template for your website. Header image has a parallax effect. Total 3 HTML pages included in this template.</p>
+				<!-- <h2 class="col-12 text-center tm-section-title">Contact Page</h2> -->
+				<!-- <p class="col-12 text-center">You may use <a rel="nofollow" href="https://www.ltcclock.com/downloads/simple-contact-form/" target="_blank">Simple Contact Form</a> to send email to your inbox. You can modify and use this template for your website. Header image has a parallax effect. Total 3 HTML pages included in this template.</p> -->
 			</header>
 
 			<div class="tm-container-inner-2 tm-contact-section">
@@ -95,13 +86,6 @@ https://templatemo.com/tm-539-simple-house
 					</div>
 				</div>
 			</div>
-
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
 			<div class="tm-container-inner-2 tm-map-section">
 				<div class="row">
 					<div class="col-12">
@@ -111,46 +95,19 @@ https://templatemo.com/tm-539-simple-house
 					</div>
 				</div>
 			</div>
-			<div class="tm-container-inner-2 tm-info-section">
-				<div class="row">
-					<!-- FAQ -->
-					<div class="col-12 tm-faq">
-						<h2 class="text-center tm-section-title">FAQs</h2>
-						<p class="text-center">This section comes with Accordion tabs for different questions and answers about Simple House HTML CSS template. Thank you. #666</p>
-						<div class="tm-accordion">
-							<button class="accordion">1. Fusce eu lorem et dui #09C maximus varius?</button>
-							<div class="panel">
-							  <p>#666 Duis blandit purus vel nenenatis rutrum. Pellentesque pellentesque tindicunt lorem, ac egestas massa sollicitudin vel. Nam scelerisque vulputate quam mollis pretium. Morbi condimentum volutpat.</p>
-							</div>
 
-							<button class="accordion">2. Vestibulum #999 ante ipsum primis in faucibus orci?</button>
-							<div class="panel">
-							  <p>Mauris euismod odio at commodo rhoncus. Maecenas nec interdum purus, sed auctor est. Sed eleifend urna nec diam consectetur, a aliquet turpis facilisis. Integer est sapien, sagittis vel massa vel, interdum euismod erat. Aenean sollicitudin nisi neque, efficitur posuere urna rutrum porta.</p>
-							</div>
-
-							<button class="accordion">3. Can I redistribute this template as a ZIP file?</button>
-							<div class="panel">
-							  <p>Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a href="https://templatemo.com/contact">contact TemplateMo</a> for additional permissions about our templates. Thank you.</p>
-							</div>
-
-							<button class="accordion">4. Ut ac erat sit amet neque efficitur faucibus et in lectus?</button>
-							<div class="panel">
-								<p>Vivamus viverra pretium ultricies. Praesent feugiat, sapien vitae blandit efficitur, sem nulla venenatis nunc, vel maximus ligula sem a sem. Pellentesque ligula ex, facilisis ac libero a, blandit ullamcorper enim.</p>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</main>
 
 		<footer class="tm-footer text-center">
-			<p>Copyright &copy; 2020 Simple House
+			<p>Copyright &copy; 2023 Biopark
 
             | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
 		</footer>
 	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/parallax.min.js"></script>
+	{% bootstrap_javascript jquery='full' %}
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
 	<script>
 		$(document).ready(function(){
 			var acc = document.getElementsByClassName("accordion");

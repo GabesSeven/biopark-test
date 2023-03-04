@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'core',
     'bootstrap4',
     'stdimage',
+    'cpf_field',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
