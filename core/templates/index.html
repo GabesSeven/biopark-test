@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biopark Imóveis</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/logo-background.png' %}">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="{% static 'img/biopark-logo.png' %}" alt="Logo" class="tm-site" />
+							<div class="tm-site-text-box">
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="{% url 'index' %}" class="tm-nav-link active">Página Inicial</a></li>
+								<li class="tm-nav-li"><a href="{% url 'register' pg=3 %}" class="tm-nav-link">Cadastrar</a></li>
+								<li class="tm-nav-li"><a href="{% url 'sec-bio' %}" class="tm-nav-link">Administrar</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">Bem vindo à Biopark Imóveis</h2>
+				<p class="col-12 text-center">Venha fazer parte! Imóveis imperdíveis em polo técnológico.<br>Uma história escrita há mais de 40 anos...</p>
+			</header>
+
+			<div class="tm-paging-links">
+				<nav>
+					<ul>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">Disponíveis</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Ocupados</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Todos</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Gallery -->
+			<div class="row tm-gallery">
+				<!-- gallery page 1 -->
+				<div id="tm-gallery-page-one" class="tm-gallery-page">
+					<tbody>
+						{% for apartamento in apartamentos %}
+						<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+							<figure>
+								<img src="{{ apartamento.imagem.url }}" class="img-fluid tm-gallery-img" alt="{{ apartamento.titulo }}">
+								<figcaption>
+									<h4 class="tm-gallery-title">{{ apartamento.titulo }}</h4>
+									<p class="tm-gallery-description">{{ apartamento.descricao }}</p>
+									<p class="tm-gallery-price">R${{ apartamento.preco }}</p>
+								</figcaption>
+							</figure>
+						</article>
+						{% endfor %}
+				</div> <!-- gallery page 1 -->
+
+
+				<!-- gallery page 2 -->
+				<div id="tm-gallery-page-information" class="tm-gallery-page hidden">
+
+				</div> <!-- gallery page 2 -->
+			</div>
+			<div class="tm-section tm-container-inner">
+				<div class="row">
+					<div class="col-md-6">
+						<figure class="tm-description-figure">
+							<img src="{% static 'img/biopark-building.jpg' %}" alt="Image" class="img-fluid" />
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<div class="tm-description-box">
+							<h4 class="tm-gallery-title">Quem somos?</h4>
+							<p class="tm-mb-45">Em 2016, o Biopark foi lançado oficialmente, marcando o início de uma nova fase de crescimento para Toledo e toda a Região Oeste do Paraná...</p>
+							<a href="{% url 'index' %}" class="tm-btn tm-btn-default tm-right">Leia Mais...</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; 2020 Simple House
+
+            | Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+		</footer>
+	</div>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script>
+		$(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</body>
+</html>
