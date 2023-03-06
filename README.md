@@ -32,6 +32,7 @@ No caso de executar em um terminal linux com MySQL instalado, basta digitar os c
     $ service mysql start 
     $ sudo mysql -p
     -> create database biopark;
+    -> create user 'biopark'@'localhost' identified by 'biopark';
     -> grant all privileges on biopark.* to 'biopark'@'localhost';
     -> quit;
     
@@ -57,7 +58,7 @@ OBS.: Projeto ainda em aperfeiçoamento, como melhorias sugiro: <br>
 
 O programa foi desenvolvido usando Django versão 4.1.7 e como depêndencia possui as seguintes bibliotecas
 
-    $ pip install 
+    $ pip install django django-bootstrap4 django-stdimage PyMySQL
 
 To run the "search.py" program, it is necessary to have an input file with the strings to be scraped: <br>
 
