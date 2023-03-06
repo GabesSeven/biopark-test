@@ -1,4 +1,5 @@
 {% load static %}
+{% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
 
@@ -57,20 +58,21 @@
 				{% if page %}
 					{% for apartamento in page.object_list %}
 						<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+							<a type="submit" href="{% url 'immobile' apartamento.id 0 %}" class="link-house" style="margin-bottom: 10px;">Alugar</a>
 							<figure>
 								<img src="{{ apartamento.imagem.url }}" class="img-fluid tm-gallery-img" alt="{{ apartamento.titulo }}">
 								<figcaptions>
-									<a class="tm-btn tm-btn-danger block" href="{% url 'register' pg=3 %}">{{ apartamento.titulo }}</a>
+									<p class="tm-gallery-letters"><strong>{{ apartamento.titulo }}</strong></p>
 									<p class="tm-gallery-letters">{{ apartamento.descricao }}</p>
 									<p class="tm-gallery-letters">Nº de quartos: {{ apartamento.numero_quartos }}</p>
 									<p class="tm-gallery-letters">Nº de banheiros: {{ apartamento.numero_banheiros }}</p>
-									<p class="tm-gallery-price">R$: {{ apartamento.preco }}/mês</p>
+									<p class="tm-gallery-price">{{ apartamento.preco }}</p>
 								</figcaption>
 							</figure>
 						</article>
 						{% endfor %}
 					{% else %}
-						<p class="">No items found.</p>
+						<p class="tm-no-found-description">No items found.</p>
 					{% endif %}
 				</div> <!-- gallery page 1 -->
 			</div>
@@ -117,16 +119,20 @@
 	<script src="{% static 'js/parallax.min.js' %}"></script>
 	<script>
 		$(document).ready(function(){
-			// Handle click on paging links
-			$('.tm-paging-link').click(function(e){
-				e.preventDefault();
+			var acc = document.getElementsByClassName("accordion");
+			var i;
 
-				var page = $(this).text().toLowerCase();
-				$('.tm-gallery-page').addClass('hidden');
-				$('#tm-gallery-page-' + page).removeClass('hidden');
-				$('.tm-paging-link').removeClass('active');
-				$(this).addClass("active");
-			});
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+				});
+			}
 		});
 	</script>
 </body>

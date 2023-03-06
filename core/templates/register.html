@@ -39,7 +39,7 @@
 
 		<main>
 			<header class="row tm-welcome-section">
-				<div class="col-12 tm-container-inner " >{% bootstrap_messages %}</div>
+				<div class="col-12" >{% bootstrap_messages %}</div>
 				<h2 class="col-12 text-center tm-section-title ">Novo edifício</h2>
 				<form class="form col-12 text-right" action="{% url 'register' pg=0 %}" method="post" autocomplete="off" enctype="multipart/form-data">
 					{% csrf_token %}
@@ -67,5 +67,23 @@
 	{% bootstrap_javascript jquery='full' %}
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script>
+		$(document).ready(function(){
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+				});
+			}
+		});
+	</script>
 </body>
 </html>

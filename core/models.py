@@ -1,27 +1,15 @@
 from django.db import models
 from stdimage.models import StdImageField
-from cpf_field.models import CPFField
-from phonenumber_field.modelfields import PhoneNumberField
 
 # SIGNALS
 from django.db.models import signals
 from django.template.defaultfilters import slugify
 
-# class Base(models.Model):
-#     criado = models.DateField('Data de Criação', auto_now_add=True)
-#     modificado = models.DateField('Data de Atualização', auto_now=True)
-#     ativo = models.BooleanField('Ativo?', default=True)
-#
-#     class Meta:
-#         abstract = True
-
 class Cliente(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField('Nome', max_length=25)
-    sobrenome = models.CharField('Sobrenome', max_length=25)
     email = models.EmailField('E-mail', max_length=100)
-    telefone = PhoneNumberField(region="BR")
-    cpf = CPFField('CPF')
+    cpf = models.DecimalField('CPF', max_digits=11, decimal_places=0)
     apartamento = models.ForeignKey('Apartamento', on_delete=models.CASCADE)
 
     class Meta():
@@ -29,27 +17,27 @@ class Cliente(models.Model):
         verbose_name_plural = 'Clientes'
 
     def __str__(self):
-        return f'{self.nome} {self.sobrenome}'
+        return f'{self.nome} {self.cpf}'
 
 class Edificio(models.Model):
 
     CIDADE_CHOICES = (
-        'Curitiba',
-        'Londrina',
-        'Maringá',
-        'Ponta Grossa',
-        'Cascavel',
-        'São José dos Pinhais',
-        'Foz do Iguaçu',
-        'Colombo',
-        'Guarapuava',
-        'Paranaguá',
-        'Araucária',
-        'Toledo',
-        'Apucarana',
-        'Campo Largo',
-        'Pinhais',
-        'Arapongas',
+        ('CU', 'Curitiba'),
+        ('LO', 'Londrina'),
+        ('MA', 'Maringá'),
+        ('PG', 'Ponta Grossa'),
+        ('CA', 'Cascavel'),
+        ('SP', 'São José dos Pinhais'),
+        ('CO', 'Colombo'),
+        ('FO', 'Foz do Iguaçu'),
+        ('GU', 'Guarapuava'),
+        ('PA', 'Paranaguá'),
+        ('AR', 'Araucária'),
+        ('TO', 'Toledo'),
+        ('AP', 'Apucarana'),
+        ('CL', 'Campo Largo'),
+        ('PI', 'Pinhais'),
+        ('AG', 'Arapongas'),
     )
 
     id = models.AutoField(primary_key=True)
@@ -57,7 +45,8 @@ class Edificio(models.Model):
     rua = models.CharField('Rua', max_length=50)
     numero = models.IntegerField('Número')
     complemento = models.CharField('Complemento', max_length=100)
-    cidade = models.CharField('Cidade', max_length=50) # , choices=CIDADE_CHOICES
+    # cidade = models.CharField('Cidade', max_length=2, choices=CIDADE_CHOICES)
+    cidade = models.CharField('Cidade', max_length=50)
 
     class Meta():
         verbose_name = 'Edificío'

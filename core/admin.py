@@ -11,4 +11,4 @@ class ApartamentoAdmin(admin.ModelAdmin):
 
 @admin.register(Cliente)
 class ClienteAdmin(admin.ModelAdmin):
-    list_display = ('id','nome', 'sobrenome', 'email', 'telefone', 'cpf', 'apartamento')
+    list_display = ('id', 'nome', 'email', 'cpf', 'apartamento')

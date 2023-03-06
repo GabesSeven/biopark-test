@@ -161,8 +161,8 @@ html {
     margin-bottom: 20px;
 }
 
-.tm-text-success {
-  color: #319966;
+.tm-text-danger {
+  color: #626364;
 }
 
 .text-center {
@@ -328,12 +328,26 @@ p, address {
   flex-wrap: wrap;
 }
 
+
+.tm-no-found-description {
+  font-size: 2rem;
+}
+
 .tm-gallery-description {
   font-size: 0.95rem;
 }
 
-.tm-gallery-letters {
+.tm-gallery-letters-link-house {
   font-size: 0.7rem;
+  text-align: right;
+}
+
+.tm-gallery-letters {
+  font-size: 0.8rem;
+}
+
+.tm-gallery-letters-description {
+  font-size: 1rem;
 }
 
 .tm-section,
@@ -396,7 +410,7 @@ p, address {
 }
 
 .tm-gallery-price {
-  font-size: 1.25rem;
+  font-size: .9rem;
   color: #BC2434;
   margin-bottom: 60px;
 }
@@ -419,7 +433,7 @@ p, address {
   padding: 10px 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   text-decoration: none;
   color: #BC2434;
   background-color: transparent;
