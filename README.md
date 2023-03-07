@@ -24,7 +24,7 @@
 
 <!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
 
-O projeto foi construído utilizando banco de dados MySQL, integrado ao django, para execução do programa é necessário criar um banco de dados "biopark" e conceder privilégios para que o aplicativo.
+O projeto foi construído utilizando banco de dados MySQL, integrado ao django, para execução do programa é necessário criar um banco de dados "biopark" e conceder privilégios para o aplicativo.
 No caso de executar em um terminal linux com MySQL instalado, basta digitar os comandos:
 
     $ service mysql start 
