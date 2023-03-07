@@ -58,7 +58,7 @@ OBS.: Projeto ainda em aperfeiçoamento, como melhorias sugiro: <br>
 
 O programa foi desenvolvido usando Django versão 4.1.7 e como depêndencia possui as seguintes bibliotecas instalas em Python:
 
-    $ pip install django django-bootstrap4 django-stdimage PyMySQL
+    $ pip install django django-bootstrap4 django-stdimage pymysql mysqlclient
 
 Ao executar no Ubuntu, ocorreu um erro na biblioteca Pillow, para concertar o erro:
 
