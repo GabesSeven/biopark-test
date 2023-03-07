@@ -80,9 +80,9 @@ Ao acessar o endereço "http://127.0.0.1:8000/", tem-se acesso a página inicial
   <li>Página de Cadastro, onde é possível cadastrar imóvel</li>
 </ul>
 
-⚠️⚠️⚠️⚠️⚠️⚠️⚠️<br>
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 <ul>
-  <li>Ao <strong>primeiro acesso</strong>, a tela inicial <strong>não terá nenhum imóvel</strong>, sendo necessário cadastrar-los.</li>
+  <li>Ao <strong>primeiro acesso</strong>, a tela inicial <strong>não terá nenhum imóvel</strong>, sendo necessário cadastrá-los.</li>
   <li>Para cadastrar um imóvel, primeiramente deve-se <strong>realizar autenticação na aba "Administrar"</strong>, voltar para "Página Inicial", depois ir em "Cadastrar".</li>
   <li>Caso contrário o programa lhe informará uma mensagem de <strong>"Erro ao cadastrar..."</strong></li>
 </ul>
