@@ -60,14 +60,10 @@ O programa foi desenvolvido usando Django versão 4.1.7 e como depêndencia poss
 
     $ pip install django django-bootstrap4 django-stdimage PyMySQL
 
-To run the "search.py" program, it is necessary to have an input file with the strings to be scraped: <br>
+Ao executar no Ubuntu, ocorreu um erro na biblioteca Pillow, para concertar o erro:
 
-    $ ls input-file.txt 
-    user1
-    user2
-    user3
-    user4
-    ...
+    $ python -m pip install --upgrade pip
+    $ python -m pip install --upgrade Pillow
 
 The program is executed passing the input file as the first parameter and the output file as the second parameter: <br>  
 
