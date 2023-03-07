@@ -89,7 +89,7 @@ Ao acessar o endereço "http://127.0.0.1:8000/", tem-se acesso a página inicial
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 
 
-![Screenshot from 2023-03-06 21-30-26](https://user-images.githubusercontent.com/37443722/223296327-a88d6678-c750-4110-9dfb-159ecc70acec.png)
+![Screenshot from 2023-03-06 21-30-26](https://user-images.githubusercontent.com/37443722/223296327-a88d6678-c750-4110-9dfb-159ecc70acec.png | width=100)
 
 <!--endsec-->
 
