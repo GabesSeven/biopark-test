@@ -84,17 +84,20 @@ Ao acessar o endereço "http://127.0.0.1:8000/", tem-se acesso a página inicial
 <ul>
   <li>Ao <strong>primeiro acesso</strong>, a tela inicial <strong>não terá nenhum imóvel</strong>, sendo necessário cadastrá-los.</li>
   <li>Para cadastrar um imóvel, primeiramente deve-se <strong>realizar autenticação na aba "Administrar"</strong>, voltar para "Página Inicial", depois ir em "Cadastrar".</li>
-  <li>Caso contrário o programa lhe informará uma mensagem de <strong>"Erro ao cadastrar..."</strong></li>
+  <li>Caso contrário o programa lhe informará uma mensagem de <strong>"Usuário não autenticado, entre na guia "Cadastro", digite usuário e senha. "</strong></li>
 </ul>
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-    
+
+
+![Screenshot from 2023-03-06 21-30-26](https://user-images.githubusercontent.com/37443722/223296327-a88d6678-c750-4110-9dfb-159ecc70acec.png)
+
 <!--endsec-->
 
 
 
 ## 📁 Acesso ao projeto
 
-You can [access the project's source code](https://github.com/GabesSeven/biopark-test/) or [download it](https://github.com/GabesSeven/biopark-test/archive/refs/heads/main.zip).
+Você pode [acessar o código fonte do projeto](https://github.com/GabesSeven/biopark-test/) ou [baixá-lo](https://github.com/GabesSeven/biopark-test/archive/refs/heads/main.zip).
 
 <hr>
 
