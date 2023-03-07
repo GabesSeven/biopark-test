@@ -75,11 +75,11 @@ Enfim, para executar o Django, basta executar os comandos para migrar os dados p
 Ao acessar o endereço "http://127.0.0.1:8000/", tem-se acesso a página inicial do programa que possui as seguintes características: <br>
 
 <ul>
-  <li>Página Inicial, lhe mostrará todos os imóveis disponíveis e oculpados.</li>
+  <li>Página Inicial, lhe mostrará todos os imóveis disponíveis e oculpados. No caso de mais de quatro imóveis cadastrado, o programa abre uma páginação para melhor visualização dos imóveis</li>
   <li>Página Imóvel, ao clicar em um imóvel na página inicial, a página é redirecionado para outra página que mostra o apartamento em maior detalhe, um formmuário que fica disponível somente se imóvel não houver inquilino, caso contrário, aparece os dados do inquilino.</li>
   <li>Página de Cadastro, onde é possível cadastrar imóvel</li>
 </ul>
-
+<br>
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 <ul>
   <li>Ao <strong>primeiro acesso</strong>, a tela inicial <strong>não terá nenhum imóvel</strong>, sendo necessário cadastrá-los.</li>
@@ -87,11 +87,13 @@ Ao acessar o endereço "http://127.0.0.1:8000/", tem-se acesso a página inicial
   <li>Caso contrário o programa lhe informará uma mensagem de <strong>"Usuário não autenticado, entre na guia "Cadastro", digite usuário e senha. "</strong></li>
 </ul>
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-
+<br>
+<br>
 <p align="center">
-  <img src="[https://camo.githubusercontent.com/...](https://user-images.githubusercontent.com/37443722/223296327-a88d6678-c750-4110-9dfb-159ecc70acec.png)" width="500" height="300"/>
+  <img src="https://user-images.githubusercontent.com/37443722/223296327-a88d6678-c750-4110-9dfb-159ecc70acec.png" width="500" height="300"/>
 </p>
-
+<br>
+<br>
 <!--endsec-->
 
 
