@@ -72,7 +72,7 @@ Enfim, para executar o Django, basta executar os comandos para migrar os dados p
      -> password: biopark
     $ python3 manage.py runserver
 
-Ao acessar o endereço "localhost:8000", tem-se acesso a página inicial do programa que possui as seguintes características: <br>
+Ao acessar o endereço "http://127.0.0.1:8000/", tem-se acesso a página inicial do programa que possui as seguintes características: <br>
 
 <ul>
   <li>Página Inicial, lhe mostrará todos os imóveis disponíveis e oculpados.</li>
@@ -80,12 +80,12 @@ Ao acessar o endereço "localhost:8000", tem-se acesso a página inicial do prog
   <li>Página de Cadastro, onde é possível cadastrar imóvel</li>
 </ul>
 
-⚠️⚠️⚠️⚠️⚠️⚠️⚠️
-<strong>
-      OBS.: Na tela inicial não terá nenhum imóvel, sendo necessário cadastrar-los.<br>
-            Para cadastrar um imóvel, primeiramente deve-se realizar autenticação na aba "Administrar", voltar para "Página Inicial", depois ir em "Cadastrar".<br>
-            Caso contrário o programa lhe informará uma mensagem de "Erro ao cadastrar..."
-</strong>
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️<br>
+<ul>
+  <li>Ao <strong>primeiro acesso</strong>, a tela inicial <strong>não terá nenhum imóvel</strong>, sendo necessário cadastrar-los.</li>
+  <li>Para cadastrar um imóvel, primeiramente deve-se <strong>realizar autenticação na aba "Administrar"</strong>, voltar para "Página Inicial", depois ir em "Cadastrar".</li>
+  <li>Caso contrário o programa lhe informará uma mensagem de <strong>"Erro ao cadastrar..."</strong></li>
+</ul>
 ⚠️⚠️⚠️⚠️⚠️⚠️⚠️
     
 <!--endsec-->
