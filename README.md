@@ -65,38 +65,50 @@ Ao executar no Ubuntu, ocorreu um erro na biblioteca Pillow, para concertar o er
     $ python -m pip install --upgrade pip
     $ python -m pip install --upgrade Pillow
 
-The program is executed passing the input file as the first parameter and the output file as the second parameter: <br>  
+Enfim, para executar o Django, basta executar os comandos para migrar os dados para o banco de dados, criar um novo super usuário e executar o servidor: <br>  
 
-    $ python search.py input-file.txt output-file.txt
+    $ python3 manage.py makemigrations
+    $ python3 manage.py migrate
+    $ python3 manage.py createsuperuser
+     -> user: biopark
+     -> password: biopark
+    $ python3 manage.py runserver
 
-Finally, the ID of each user separated by pipeline will be returned, if the number of users found corresponding to the searched string is less than four: <br>
+Ao acessar o endereço "localhost:8000", tem-se acesso a página inicial do programa que possui as seguintes características: <br>
 
-    $ ls output-file.txt 
-    user1
-    |id1,id2,id3
-    user2
-    |id1,id2
-    user3
-    |id1
-    user4
-    |
-    ...
+<ul>
+  <li>Página Inicial, lhe mostrará todos os imóveis disponíveis e oculpados.</li>
+  <li>Página Imóvel, ao clicar em um imóvel na página inicial, a página é redirecionado para outra página que mostra o apartamento em maior detalhe, um formmuário que fica disponível somente se imóvel não houver inquilino, caso contrário, aparece os dados do inquilino.</li>
+  <li>Página de Cadastro, onde é possível cadastrar imóvel</li>
+</ul>
+
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+<strong>
+      OBS.: Na tela inicial não terá nenhum imóvel, sendo necessário cadastrar-los.<br>
+            Para cadastrar um imóvel, primeiramente deve-se realizar autenticação na aba "Administrar", voltar para "Página Inicial", depois ir em "Cadastrar".<br>
+            Caso contrário o programa lhe informará uma mensagem de "Erro ao cadastrar..."
+</strong>
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️
     
-In the previous example, user1 found four users, user2 two users, user3 one user, and user4 found more than four users.
-
 <!--endsec-->
 
 
 
 ## 📁 Project access
 
-You can [access the project's source code](https://github.com/GabesSeven/instagram-id-scraper-api/) or [download it](https://github.com/GabesSeven/instagram-id-scraper-api/archive/refs/heads/main.zip).
+You can [access the project's source code](https://github.com/GabesSeven/biopark-test/) or [download it](https://github.com/GabesSeven/biopark-test/archive/refs/heads/main.zip).
 
 <hr>
 
 ## ✔️ Techniques and technologies used
 
 - ``Python``
+- ``Django``
+- ``MySQL``
+- ``Bootstrap``
+- ``HTML``
+- ``CSS``
+- ``JS``
 
 <hr>
 
