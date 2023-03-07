@@ -20,7 +20,7 @@
 
 <hr>
 
-## 🖥️ Banco de Dados
+## 💽 Banco de Dados
 
 <!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
 
@@ -80,25 +80,25 @@ Ao acessar o endereço "http://127.0.0.1:8000/", tem-se acesso a página inicial
   <li>Página de Cadastro, onde é possível cadastrar imóvel</li>
 </ul>
 
-⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 <ul>
   <li>Ao <strong>primeiro acesso</strong>, a tela inicial <strong>não terá nenhum imóvel</strong>, sendo necessário cadastrá-los.</li>
   <li>Para cadastrar um imóvel, primeiramente deve-se <strong>realizar autenticação na aba "Administrar"</strong>, voltar para "Página Inicial", depois ir em "Cadastrar".</li>
   <li>Caso contrário o programa lhe informará uma mensagem de <strong>"Erro ao cadastrar..."</strong></li>
 </ul>
-⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
     
 <!--endsec-->
 
 
 
-## 📁 Project access
+## 📁 Acesso ao projeto
 
 You can [access the project's source code](https://github.com/GabesSeven/biopark-test/) or [download it](https://github.com/GabesSeven/biopark-test/archive/refs/heads/main.zip).
 
 <hr>
 
-## ✔️ Techniques and technologies used
+## ✔️ Tecnologias utilizadas
 
 - ``Python``
 - ``Django``
@@ -110,7 +110,7 @@ You can [access the project's source code](https://github.com/GabesSeven/biopark
 
 <hr>
 
-## 🧑‍💻 Developer
+## 🧑‍💻 Desenvolvedor
 
 | [<img src="https://avatars.githubusercontent.com/u/37443722?v=4" width=115><br><sub>Gabriel Ferreira</sub>](https://github.com/GabesSeven)
 | :---: 
