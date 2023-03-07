@@ -20,8 +20,6 @@
 
 <hr>
 
-<hr>
-
 ## 🖥️ Banco de Dados
 
 <!--sec data-title="Prompt: OS X and Linux" data-id="OSX_Linux_prompt" data-collapse=true ces-->
