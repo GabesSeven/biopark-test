@@ -38,7 +38,7 @@ No caso de executar em um terminal Linux com MySQL instalado, basta digitar os c
 
 O banco de dados possui o modelo relacional com três tabelas: Edifício, Apartamento e Cliente. A relação entre elas pode ser observada na imagem abaixo: <br>
 
-![Untitled Diagram drawio](https://user-images.githubusercontent.com/37443722/223207621-62bab491-60af-45f4-b98a-6db004a76ab3.png)
+![Untitled Diagram drawio(1)](https://user-images.githubusercontent.com/37443722/223795867-3f806d7e-ff83-409e-860b-599a0602f281.png)
 
 <hr>
 
